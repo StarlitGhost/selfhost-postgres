@@ -15,6 +15,10 @@ This relies on my [base docker services](https://github.com/StarlitGhost/selfhos
 You'll want to symlink that project's .env file into this project's directory
 and set `POSTGRES_USER` and `POSTGRES_PW` in it.
 
+Next create a docker network for containers that want to use postgres:
+
+`docker network create postgres_network`
+
 Once that's done you can just spin it up with `docker-compose up -d`.
 
 You'll need to create a database for each project that uses this;
